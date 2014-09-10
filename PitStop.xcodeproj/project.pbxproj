@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A34D49B419BA940A00002826 /* MapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A34D49B319BA940A00002826 /* MapPoint.m */; };
 		A361260119B635C300DB64D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A361260019B635C300DB64D2 /* main.m */; };
 		A361260419B635C300DB64D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A361260319B635C300DB64D2 /* AppDelegate.m */; };
 		A361260A19B635C300DB64D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A361260819B635C300DB64D2 /* Main.storyboard */; };
@@ -48,6 +49,9 @@
 		A361267919B6929800DB64D2 /* FavoriteRestaurantTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A361267819B6929800DB64D2 /* FavoriteRestaurantTableViewController.m */; };
 		A361267C19B6964500DB64D2 /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = A361267B19B6964500DB64D2 /* Restaurant.m */; };
 		A361267F19B69D8400DB64D2 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A361267E19B69D8400DB64D2 /* SettingsViewController.m */; };
+		A3C9B7A719B7C9F100EE203E /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C9B7A619B7C9F100EE203E /* gear.png */; };
+		A3C9B7A919B7C9F800EE203E /* map2.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C9B7A819B7C9F800EE203E /* map2.png */; };
+		A3C9B7AB19B7C9FD00EE203E /* favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C9B7AA19B7C9FD00EE203E /* favorite.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A34D49B219BA940A00002826 /* MapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPoint.h; sourceTree = "<group>"; };
+		A34D49B319BA940A00002826 /* MapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPoint.m; sourceTree = "<group>"; };
 		A36125FB19B635C300DB64D2 /* PitStop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitStop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A36125FF19B635C300DB64D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A361260019B635C300DB64D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -116,6 +122,9 @@
 		A361267B19B6964500DB64D2 /* Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Restaurant.m; sourceTree = "<group>"; };
 		A361267D19B69D8400DB64D2 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		A361267E19B69D8400DB64D2 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		A3C9B7A619B7C9F100EE203E /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gear.png; path = "../../../../Pictures/app images/gear.png"; sourceTree = "<group>"; };
+		A3C9B7A819B7C9F800EE203E /* map2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = map2.png; path = "../../../../Pictures/app images/map2.png"; sourceTree = "<group>"; };
+		A3C9B7AA19B7C9FD00EE203E /* favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = favorite.png; path = "../../../../Pictures/app images/favorite.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +164,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A34D49B119BA8D9600002826 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A361265519B643F900DB64D2 /* Comms.h */,
+				A361265619B643F900DB64D2 /* Comms.m */,
+				A361267A19B6964500DB64D2 /* Restaurant.h */,
+				A361267B19B6964500DB64D2 /* Restaurant.m */,
+				A34D49B219BA940A00002826 /* MapPoint.h */,
+				A34D49B319BA940A00002826 /* MapPoint.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		A36125F219B635C200DB64D2 = {
 			isa = PBXGroup;
 			children = (
@@ -182,11 +204,10 @@
 				A361260319B635C300DB64D2 /* AppDelegate.m */,
 				A361260819B635C300DB64D2 /* Main.storyboard */,
 				A361262219B635EC00DB64D2 /* View Controllers */,
+				A34D49B119BA8D9600002826 /* Models */,
 				A361266419B68BFA00DB64D2 /* Library */,
 				A361260B19B635C300DB64D2 /* Images.xcassets */,
 				A36125FE19B635C300DB64D2 /* Supporting Files */,
-				A361265519B643F900DB64D2 /* Comms.h */,
-				A361265619B643F900DB64D2 /* Comms.m */,
 			);
 			path = PitStop;
 			sourceTree = "<group>";
@@ -229,8 +250,6 @@
 				A361262719B6360700DB64D2 /* MapSearchViewController.m */,
 				A361267719B6929800DB64D2 /* FavoriteRestaurantTableViewController.h */,
 				A361267819B6929800DB64D2 /* FavoriteRestaurantTableViewController.m */,
-				A361267A19B6964500DB64D2 /* Restaurant.h */,
-				A361267B19B6964500DB64D2 /* Restaurant.m */,
 				A361267D19B69D8400DB64D2 /* SettingsViewController.h */,
 				A361267E19B69D8400DB64D2 /* SettingsViewController.m */,
 			);
@@ -267,6 +286,9 @@
 		A361262A19B6362D00DB64D2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A3C9B7AA19B7C9FD00EE203E /* favorite.png */,
+				A3C9B7A819B7C9F800EE203E /* map2.png */,
+				A3C9B7A619B7C9F100EE203E /* gear.png */,
 				A361267519B6925300DB64D2 /* outcoming1.png */,
 				A361267319B691FB00DB64D2 /* fblogout.png */,
 				A361267119B6904100DB64D2 /* settings20.png */,
@@ -371,7 +393,10 @@
 			files = (
 				A361263A19B640BF00DB64D2 /* FBUserSettingsViewResources.bundle in Resources */,
 				A361267419B691FB00DB64D2 /* fblogout.png in Resources */,
+				A3C9B7A719B7C9F100EE203E /* gear.png in Resources */,
+				A3C9B7AB19B7C9FD00EE203E /* favorite.png in Resources */,
 				A361267619B6925300DB64D2 /* outcoming1.png in Resources */,
+				A3C9B7A919B7C9F800EE203E /* map2.png in Resources */,
 				A361266319B6837700DB64D2 /* fblogin2.png in Resources */,
 				A361266C19B68EBB00DB64D2 /* list23.png in Resources */,
 				A361260A19B635C300DB64D2 /* Main.storyboard in Resources */,
@@ -399,6 +424,7 @@
 			files = (
 				A361260419B635C300DB64D2 /* AppDelegate.m in Sources */,
 				A361260119B635C300DB64D2 /* main.m in Sources */,
+				A34D49B419BA940A00002826 /* MapPoint.m in Sources */,
 				A361267919B6929800DB64D2 /* FavoriteRestaurantTableViewController.m in Sources */,
 				A361262519B635FA00DB64D2 /* LoginViewController.m in Sources */,
 				A361267C19B6964500DB64D2 /* Restaurant.m in Sources */,

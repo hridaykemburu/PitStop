@@ -33,6 +33,11 @@
     
     //make navigation bar transparent
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
+//    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+//                                                  forBarMetrics:UIBarMetricsDefault];
+//    self.navigationController.navigationBar.shadowImage = [UIImage new];
+//    self.navigationController.navigationBar.translucent = YES;
+//    self.navigationController.view.backgroundColor = [UIColor clearColor];
     
     //sidebar button
     // Change button color
@@ -64,6 +69,43 @@
     Restaurant *item4 = [[Restaurant alloc] init];
     item4.itemName = @"Chipotle";
     [self.foodPlaces addObject:item4];
+    Restaurant *item5 = [[Restaurant alloc] init];
+    item5.itemName = @"KFC";
+    [self.foodPlaces addObject:item5];
+    Restaurant *item6 = [[Restaurant alloc] init];
+    item6.itemName = @"Pizza Hut";
+    [self.foodPlaces addObject:item6];
+    Restaurant *item7 = [[Restaurant alloc] init];
+    item7.itemName = @"Domino's Pizza";
+    [self.foodPlaces addObject:item7];
+    Restaurant *item8 = [[Restaurant alloc] init];
+    item8.itemName = @"Panera Bread";
+    [self.foodPlaces addObject:item8];
+    Restaurant *item9 = [[Restaurant alloc] init];
+    item9.itemName = @"Chick-Fil-A";
+    [self.foodPlaces addObject:item9];
+    Restaurant *item10 = [[Restaurant alloc] init];
+    item10.itemName = @"Burger King";
+    [self.foodPlaces addObject:item10];
+    Restaurant *item11 = [[Restaurant alloc] init];
+    item11.itemName = @"Wendy's";
+    [self.foodPlaces addObject:item11];
+    Restaurant *item12 = [[Restaurant alloc] init];
+    item12.itemName = @"Starbucks";
+    [self.foodPlaces addObject:item12];
+    Restaurant *item13 = [[Restaurant alloc] init];
+    item13.itemName = @"cable car cafe";
+    [self.foodPlaces addObject:item13];
+    PFUser *currentUser = [PFUser currentUser];
+    NSArray *food = [currentUser objectForKey:@"restaurants"];
+    for (Restaurant *r in self.foodPlaces) {
+        NSString *f = r.itemName;
+        for (NSString *s in food) {
+            if ([s isEqualToString:f]) {
+                r.liked = TRUE;
+            }
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -106,8 +148,14 @@
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     Restaurant *tappedItem = [self.foodPlaces objectAtIndex:indexPath.row];
     tappedItem.liked = !tappedItem.liked;
+    PFUser *currentUser = [PFUser currentUser];
+    if (tappedItem.liked) {
+        [currentUser addObject:tappedItem.itemName forKey:@"restaurants"];
+    } else {
+        [currentUser removeObject:tappedItem.itemName forKey:@"restaurants"];
+    }
+    [currentUser saveInBackground];
     [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
-    
 }
 
 /*
